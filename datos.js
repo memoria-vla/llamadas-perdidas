@@ -42,7 +42,7 @@ window.DISPOSITIVO = {
     // -----------------------------------------------------------------
     {
       numero: 2,
-      concepto: "Conquista del Desierto y dictadura",
+      concepto: "Dictadura",
       quien: "Delfina",
       inicial: "D",
       desde: "Llamada perdida · 14 de noviembre",
@@ -56,8 +56,7 @@ window.DISPOSITIVO = {
         { titulo: "Plano topográfico y trazado vial, 1977", tipo: "ficcion", archivo: "img/e2-mapa-1977.jpg", nota: "Documento creado para el relato." }
       ],
       fuentes: [
-        { texto: "Pilar Calveiro, Poder y desaparición. Los campos de concentración en Argentina (1998).", origen: "Bibliografía de la materia", url: "" },
-        { texto: "PENDIENTE: el capítulo II no menciona la Conquista del Desierto. Hace falta al menos un documento real que la conecte con el acta.", origen: "", url: "" }
+        { texto: "Pilar Calveiro, Poder y desaparición. Los campos de concentración en Argentina (1998).", origen: "Bibliografía de la materia", url: "" }
       ],
       pregunta: "¿Quién firmó ese papel, y quién lo obedeció?"   // PROPUESTA
     },
