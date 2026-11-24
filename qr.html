@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QR para imprimir · Llamadas perdidas</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  body{font-family:Georgia,serif;margin:0;background:#fff;color:#111}
+  .hoja{width:180mm;min-height:250mm;margin:10mm auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10mm;text-align:center;border:1px dashed #bbb;page-break-after:always;break-after:page;padding:10mm;box-sizing:border-box}
+  .estado{font-family:monospace;letter-spacing:.15em;text-transform:uppercase;color:#c0262c;font-size:16pt}
+  h1{font-size:48pt;font-weight:400;margin:0}
+  .qr{padding:6mm;background:#fff}
+  .qr img,.qr canvas{width:110mm!important;height:110mm!important}
+  p{font-size:16pt;margin:0;max-width:140mm}
+  small{font-family:monospace;font-size:10pt;color:#555}
+  .ayuda{max-width:180mm;margin:10mm auto;font-family:sans-serif}
+  @media print{.ayuda{display:none}.hoja{border:0;margin:0 auto}}
+</style>
+</head>
+<body>
+<div class="ayuda"><strong>Para imprimir:</strong> Ctrl+P (o Compartir → Imprimir en el celular). Una hoja por estación.</div>
+<div id="hojas"></div>
+<script>
+const base = location.href.replace(/qr\.html.*$/, "");
+for (let n = 1; n <= 4; n++){
+  const url = base + "estacion-" + n + ".html";
+  const h = document.createElement("section"); h.className = "hoja";
+  h.innerHTML = '<div class="estado">Llamada perdida</div><h1>Estación ' + n + '</h1><div class="qr" id="qr' + n + '"></div>'
+    + '<p>Escaneá el código y devolvé la llamada. Mejor con auriculares.</p><small>' + url + '</small>';
+  document.getElementById("hojas").append(h);
+  new QRCode(document.getElementById("qr" + n), {text:url, width:512, height:512, correctLevel:QRCode.CorrectLevel.M});
+}
+</script>
+</body>
+</html>
