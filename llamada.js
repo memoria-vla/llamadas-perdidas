@@ -44,8 +44,9 @@
     col.append(
       el("section", null,
         el("h1", {class:"pregunta"}, E.concepto),
-        el("p", {class:"consejo"}, "Lo que Delfina encontró existe fuera de la ficción. Acá está.")
+        el("p", {class:"consejo"}, E.intro || "Lo que Delfina encontró existe fuera de la ficción. Acá está.")
       ),
+      seccionDocumentos(),
       seccionFuentes(),
       el("section", null, el("p", {class:"pregunta"}, E.pregunta)),
       el("p", {class:"aviso"}, D.aviso)
@@ -96,7 +97,8 @@
   function seccionDocumentos(){
     if (!E.documentos.length) return null;
     return el("section", null,
-      el("h2", null, "Lo que encontró"),
+      el("h2", null, E.tituloDocs || "Lo que encontró"),
+      el("p", {class:"consejo", style:"margin:-4px 0 12px"}, "Tocá una imagen para verla en grande."),
       el("div", {class:"docs"}, E.documentos.map(d =>
         el("figure", {class:"doc", style:"margin:0"},
           imagen(d),
@@ -119,13 +121,14 @@
     const vacio = () => el("div", {class:"marco"}, "Imagen pendiente");
     if (!d.archivo) return vacio();
     const img = el("img", {src:d.archivo, alt:d.titulo || "Documento", loading:"lazy"});
-    img.addEventListener("error", () => img.replaceWith(vacio()));
-    return img;
+    const a = el("a", {href:d.archivo, target:"_blank", rel:"noopener", "aria-label":"Ver en grande"}, img);
+    img.addEventListener("error", () => a.replaceWith(vacio()));
+    return a;
   }
   function seccionFuentes(){
     if (!E.fuentes.length) return null;
     return el("section", null,
-      el("h2", null, E.audio ? "En qué hechos se basa" : "Para seguir buscando"),
+      el("h2", null, E.quien ? "En qué hechos se basa" : "Enlaces para seguir buscando"),
       el("ul", {class:"fuentes"}, E.fuentes.map(f =>
         el("li", {class: marcaPendiente(f.texto) ? "pendiente" : ""},
           f.texto,

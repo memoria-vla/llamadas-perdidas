@@ -93,11 +93,40 @@ window.DISPOSITIVO = {
       numero: 4,
       concepto: "Repositorio",
       quien: "", inicial: "", desde: "", gancho: "", audio: "", relato: "",
-      documentos: [],
+      intro: "Lo que Delfina encontró existe fuera de la ficción. Fuentes, marco teórico, documentos y recursos que dan contenido a este recorrido.",
+      tituloDocs: "Repositorio",
+      // la lámina 13 (relato de Jorge Francisco López) queda afuera hasta confirmar su consentimiento
+      documentos: [
+        { titulo: "", tipo: "", archivo: "img/e4/01.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/02.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/03.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/04.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/05.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/06.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/07.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/08.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/09.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/10.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/11.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/12.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/14.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/15.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/16.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/17.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/18.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/19.jpg", nota: "" },
+        { titulo: "", tipo: "", archivo: "img/e4/20.jpg", nota: "" }
+      ],
       fuentes: [
-        { texto: "Abuelas de Plaza de Mayo: si tenés dudas sobre tu identidad.", origen: "abuelas.org.ar", url: "https://www.abuelas.org.ar/" },
-        { texto: "PENDIENTE: registro de detenidos desaparecidos del Observatorio de DDHH de Neuquén.", origen: "", url: "" },
-        { texto: "PENDIENTE: el resto del repositorio que arman Nadia y Cristian.", origen: "", url: "" }
+        { texto: "Genocidios (nota).", origen: "Infoterritorial", url: "https://infoterritorial.com.ar/genocidios/" },
+        { texto: "Awka Liwen. Rebelde amanecer (película completa).", origen: "Osvaldo Bayer, Mariano Aiello y Kristina Hille", url: "https://youtu.be/FxKT5e5S9hQ" },
+        { texto: "Memoria implacable. Marichi Tukulpan (tráiler).", origen: "Documental", url: "https://www.youtube.com/watch?v=jtOYqG9Kuxg" },
+        { texto: "Informes y testimonios. La tortura política en la Argentina, 1966-1972.", origen: "Documental, 1973", url: "https://youtu.be/RSmVbr_zYqY" },
+        { texto: "Las AAA son las tres armas (a partir de la carta de Rodolfo Walsh a la Junta).", origen: "Cortometraje documental", url: "https://youtu.be/5Ajc-TgZoD0" },
+        { texto: "A 40 años del golpe militar: cómo se vivió en Villa La Angostura.", origen: "Diario Andino, 24/03/2016", url: "https://www.diarioandino.com.ar/noticias/2016/03/24/195222-a-40-anos-del-golpe-militar-como-se-vivio-en-villa-la-angostura" },
+        { texto: "Adriana Metz y el nieto 140.", origen: "Video", url: "https://www.youtube.com/watch?v=V8Wl90j0xZI" },
+        { texto: "Juan, como si nada hubiera sucedido.", origen: "Documental de Carlos Echeverría", url: "https://vimeo.com/161307904" },
+        { texto: "Abuelas de Plaza de Mayo: si tenés dudas sobre tu identidad.", origen: "abuelas.org.ar", url: "https://www.abuelas.org.ar/" }
       ],
       pregunta: "¿Qué recuerda Villa La Angostura, y qué olvida?"   // PROPUESTA
     }
