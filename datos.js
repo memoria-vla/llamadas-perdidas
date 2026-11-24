@@ -15,7 +15,7 @@
 window.DISPOSITIVO = {
   titulo: "Llamadas perdidas",
   bajada: "Un recorrido de cuatro estaciones por la bicisenda de Villa La Angostura.",
-  aviso: "Este recorrido habla de la última dictadura y de la Conquista del Desierto: desapariciones, apropiación de niños y violencia. Recomendado desde los 13 años.",
+  aviso: "Este recorrido habla de la última dictadura cívico-militar argentina (1976-1983): desapariciones, apropiación de niños y violencia. Recomendado desde los 13 años.",
   lema: ["Esta voz es ficción.", "Lo que cuenta, no."],
   pistaGeneral: "Caminá unos metros más hasta encontrar el próximo QR.",
 
@@ -42,7 +42,7 @@ window.DISPOSITIVO = {
     // -----------------------------------------------------------------
     {
       numero: 2,
-      concepto: "Dictadura",
+      concepto: "Dictadura cívico-militar",
       quien: "Delfina",
       inicial: "D",
       desde: "Llamada perdida · 14 de noviembre",
@@ -50,7 +50,7 @@ window.DISPOSITIVO = {
       audio: "",
       relato: "relatos/estacion-2.txt",
       documentos: [
-        { titulo: "Acta de control de tránsito y movimiento de personal, 1977", tipo: "ficcion", archivo: "img/e2-acta-traslado.jpg", nota: "Documento creado para el relato. El Comando de Zona V y la Subzona 52 sí existieron: Neuquén dependía de ellos durante la dictadura." },
+        { titulo: "Acta de control de tránsito y movimiento de personal, 1977", tipo: "ficcion", archivo: "img/e2-acta-traslado.jpg", nota: "Documento creado para el relato. El Comando de Zona V y la Subzona 52 sí existieron: Neuquén dependía de ellos durante la dictadura cívico-militar (1976-1983)." },
         { titulo: "El truco", tipo: "ficcion", archivo: "img/e2-truco.jpg", nota: "Ilustración generada para el relato." },
         { titulo: "Detención en la vía pública", tipo: "sin-rotular", archivo: "img/e2-detenido.jpg", nota: "PENDIENTE: autor, lugar y fecha de la foto." },
         { titulo: "Plano topográfico y trazado vial, 1977", tipo: "ficcion", archivo: "img/e2-mapa-1977.jpg", nota: "Documento creado para el relato." }
@@ -77,7 +77,7 @@ window.DISPOSITIVO = {
         { titulo: "", tipo: "real", archivo: "img/e3-ficha-3.jpg", nota: "" },
         { titulo: "", tipo: "real", archivo: "img/e3-ficha-4.jpg", nota: "" },
         { titulo: "Informe de la inteligencia chilena: 22.000 muertos y desaparecidos", tipo: "real", archivo: "img/e3-22mil.jpg", nota: "Transcripción del cable firmado con el alias de Enrique Arancibia Clavel, agente de la DINA en Buenos Aires (1978)." },
-        { titulo: "Testimonio: una mujer habla de su esposo, policía durante la dictadura", tipo: "real", sonido: "audio/e3-testimonio-1.mp3", nota: "Testimonio oral recogido por el grupo, con consentimiento. Se omite su nombre." },
+        { titulo: "Testimonio: una mujer habla de su esposo, policía durante la dictadura cívico-militar", tipo: "real", sonido: "audio/e3-testimonio-1.mp3", nota: "Testimonio oral recogido por el grupo, con consentimiento. Se omite su nombre." },
         { titulo: "Testimonio: su situación personal en ese contexto", tipo: "real", sonido: "audio/e3-testimonio-2.mp3", nota: "" },
         { titulo: "Testimonio: cómo miraban sus hijos a su padre policía", tipo: "real", sonido: "audio/e3-testimonio-3.mp3", nota: "" }
       ],
@@ -97,7 +97,6 @@ window.DISPOSITIVO = {
       fuentes: [
         { texto: "Abuelas de Plaza de Mayo: si tenés dudas sobre tu identidad.", origen: "abuelas.org.ar", url: "https://www.abuelas.org.ar/" },
         { texto: "PENDIENTE: registro de detenidos desaparecidos del Observatorio de DDHH de Neuquén.", origen: "", url: "" },
-        { texto: "PENDIENTE: material sobre el genocidio indígena en la región (Valcheta, Lenton, Nagy).", origen: "", url: "" },
         { texto: "PENDIENTE: el resto del repositorio que arman Nadia y Cristian.", origen: "", url: "" }
       ],
       pregunta: "¿Qué recuerda Villa La Angostura, y qué olvida?"   // PROPUESTA
