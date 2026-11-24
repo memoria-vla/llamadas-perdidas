@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<meta name="color-scheme" content="dark">
+<title>Llamadas perdidas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<main class="col portada" id="app">
+  <span class="borrador">Borrador · contenido en armado</span>
+  <h1 id="titulo"></h1>
+  <p class="bajada" id="bajada"></p>
+  <p class="aviso" id="aviso"></p>
+  <ol class="lista" id="lista"></ol>
+  <footer>Dispositivo de memoria diseñado por estudiantes de 4° año del Profesorado de Filosofía, ISFD 15, Villa La Angostura, 2026. Cátedra Filosofía Política, Derechos Humanos y Pedagogía de la Memoria.</footer>
+</main>
+<script src="datos.js"></script>
+<script>
+(function(){
+  const D = window.DISPOSITIVO, $ = id => document.getElementById(id);
+  $("titulo").textContent = D.titulo;
+  $("bajada").textContent = D.bajada;
+  $("aviso").textContent = D.aviso;
+  D.estaciones.forEach(e => {
+    const li = document.createElement("li"), a = document.createElement("a");
+    a.href = "estacion-" + e.numero + ".html";
+    const n = document.createElement("span"); n.className = "n"; n.textContent = e.numero;
+    const t = document.createElement("span"); t.textContent = e.concepto;
+    
+    a.append(n, t); li.append(a); $("lista").append(li);
+  });
+})();
+</script>
+</body>
+</html>

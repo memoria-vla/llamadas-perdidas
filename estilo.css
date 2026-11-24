@@ -1,0 +1,90 @@
+/* Llamadas perdidas - una columna angosta, pensada para celular y de noche. */
+:root{
+  --noche:#0d1117; --noche-2:#161c26; --linea:#2a3342;
+  --texto:#e7e9ee; --tenue:#9aa3b2;
+  --verde:#2fbf71; --rojo:#e5484d; --brasa:#d9a441;
+  --papel:#ece4d3; --tinta:#2b2a33;
+  --f-titulo:"Instrument Serif", Georgia, serif;
+  --f-cuerpo:"Newsreader", Georgia, serif;
+  --f-tel:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;background:var(--noche);color:var(--texto)}
+body{font-family:var(--f-cuerpo);font-size:17px;line-height:1.55;
+  padding:max(20px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 56px max(16px,env(safe-area-inset-left))}
+img{max-width:100%;display:block}
+a{color:var(--texto)}
+.col{max-width:460px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.borrador{font-family:var(--f-tel);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brasa);border:1px solid var(--brasa);border-radius:4px;padding:3px 8px;align-self:flex-start}
+.pendiente{color:var(--brasa)}
+
+/* Recorrido */
+.recorrido{display:flex;align-items:center;gap:10px;font-family:var(--f-tel);font-size:12px;color:var(--tenue)}
+.recorrido ol{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+.recorrido li a,.recorrido li span{width:26px;height:26px;border-radius:50%;border:1px solid var(--linea);display:grid;place-items:center;font-size:11px;text-decoration:none;color:var(--tenue)}
+.recorrido li.on a,.recorrido li.on span{border-color:var(--verde);color:var(--verde)}
+
+/* Teléfono */
+.tel{background:var(--noche-2);border:1px solid var(--linea);border-radius:28px;padding:36px 24px 28px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+.estado{font-family:var(--f-tel);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--rojo)}
+.estado.vivo{color:var(--verde)}
+.avatar{width:84px;height:84px;border-radius:50%;background:var(--linea);display:grid;place-items:center;font-family:var(--f-titulo);font-size:40px}
+.quien{font-family:var(--f-titulo);font-weight:400;font-size:40px;line-height:1.05;margin:0}
+.desde{font-family:var(--f-tel);font-size:13px;color:var(--tenue);margin:-8px 0 0}
+.reloj{font-family:var(--f-tel);font-size:15px;font-variant-numeric:tabular-nums;min-height:1.4em}
+.subtitulo{min-height:4.5em;font-size:18px;line-height:1.45;max-width:34ch;font-style:italic;margin:0}
+.ondas{display:flex;gap:4px;align-items:center;height:28px}
+.ondas i{display:block;width:4px;border-radius:2px;background:var(--verde);height:6px;opacity:.85}
+.hablando .ondas i{animation:onda 900ms ease-in-out infinite}
+.ondas i:nth-child(2){animation-delay:120ms}.ondas i:nth-child(3){animation-delay:240ms}.ondas i:nth-child(4){animation-delay:360ms}.ondas i:nth-child(5){animation-delay:480ms}
+@keyframes onda{0%,100%{height:6px}50%{height:26px}}
+.botones{display:flex;gap:28px;justify-content:center;margin-top:6px}
+.btn-tel{width:68px;height:68px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;color:#fff}
+.btn-tel svg{width:28px;height:28px}
+.btn-verde{background:var(--verde)} .btn-rojo{background:var(--rojo)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--brasa);outline-offset:3px}
+.etq{font-family:var(--f-tel);font-size:12px;color:var(--tenue)}
+.consejo{font-size:14px;color:var(--tenue);margin:0}
+.leer{background:none;border:1px solid var(--linea);color:var(--tenue);border-radius:999px;padding:6px 14px;font-family:var(--f-tel);font-size:12px;cursor:pointer}
+
+/* Relato en texto */
+.relato{background:var(--noche-2);border:1px solid var(--linea);border-radius:12px;padding:18px 18px 8px}
+.relato p{margin:0 0 14px}
+
+/* Después de la llamada */
+.despues{display:flex;flex-direction:column;gap:30px}
+.lema{font-family:var(--f-titulo);font-size:34px;line-height:1.1;margin:0}
+.lema em{color:var(--brasa)}
+h2{font-family:var(--f-tel);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);margin:0 0 12px}
+.docs{display:flex;flex-direction:column;gap:18px}
+.doc{border:1px solid var(--linea);border-radius:8px;overflow:hidden;background:var(--noche-2)}
+.doc .marco{aspect-ratio:4/3;background:var(--papel);color:var(--tinta);display:grid;place-items:center;text-align:center;padding:18px;font-size:15px}
+.doc .marco-audio{aspect-ratio:auto;padding:22px 14px;background:var(--noche-2)}
+.doc .marco-audio audio{width:100%}
+.doc .pie{padding:10px 14px;display:flex;flex-direction:column;gap:4px}
+.doc .pie strong{font-weight:500}
+.sello{font-family:var(--f-tel);font-size:11px;letter-spacing:.08em;text-transform:uppercase;align-self:flex-start;padding:2px 7px;border-radius:3px}
+.sello.ficcion{color:var(--brasa);border:1px solid var(--brasa)}
+.sello.real{color:var(--verde);border:1px solid var(--verde)}
+.sello.sin-rotular{color:var(--rojo);border:1px dashed var(--rojo)}
+.doc .nota{font-size:13px;color:var(--tenue)}
+.fuentes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:15px}
+.fuentes li{border-left:2px solid var(--linea);padding-left:12px}
+.fuentes span{display:block;color:var(--tenue);font-size:13px;font-family:var(--f-tel)}
+.pregunta{font-family:var(--f-titulo);font-size:30px;line-height:1.15;margin:0}
+.siguiente{border-top:1px solid var(--linea);padding-top:20px;display:flex;flex-direction:column;gap:6px}
+.siguiente p{margin:0}
+
+/* Portada */
+.portada h1{font-family:var(--f-titulo);font-weight:400;font-size:52px;line-height:1;margin:0}
+.portada .bajada{font-size:19px;margin:0}
+.aviso{font-size:14px;color:var(--tenue);border:1px dashed var(--linea);border-radius:8px;padding:12px 14px;margin:0}
+.lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.lista a{display:flex;gap:14px;align-items:center;padding:14px;border:1px solid var(--linea);border-radius:12px;text-decoration:none;background:var(--noche-2)}
+.lista .n{width:34px;height:34px;border-radius:50%;border:1px solid var(--rojo);color:var(--rojo);display:grid;place-items:center;font-family:var(--f-tel);font-size:13px;flex:none}
+.lista small{display:block;color:var(--tenue);font-family:var(--f-tel);font-size:12px}
+footer{font-size:13px;color:var(--tenue)}
+
+@media (prefers-reduced-motion: reduce){.hablando .ondas i{animation:none;height:16px}}
